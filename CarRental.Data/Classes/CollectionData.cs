@@ -1,11 +1,7 @@
 ﻿using CarRental.Common.Classes;
+using CarRental.Common.Enums;
 using CarRental.Common.Interfaces;
 using CarRental.Data.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CarRental.Data.Classes
 {
@@ -20,9 +16,16 @@ namespace CarRental.Data.Classes
         new Car("DEF456", "Volkswagen", 8000, 100.0, 300.0, Common.Enums.VehicleTypes.Passat, Common.Enums.VehicleStatuses.Unavailable),
         new Car("GHI789", "Citroen", 10000, 150.0, 400.0, Common.Enums.VehicleTypes.Van, Common.Enums.VehicleStatuses.Available),
         new Car("JKL123", "Yamaha", 0, 250.0, 1000.0, Common.Enums.VehicleTypes.Motorcycle, Common.Enums.VehicleStatuses.Unavailable)};
-        readonly List<IBooking> _bookings = new List<IBooking> {new Booking("RKO132", ),};
+        readonly List<IBooking> _bookings;
+        public CollectionData()
+        {
+            _bookings = new List<IBooking> 
+            {new Booking("RKO132", _persons.Single(p => p.SocialSecNum == 000318), 3700, 4000, DateTime.Now, DateTime.Now.AddDays(1),21400, VehicleStatuses.Available),
+            new Booking("DEF456", _persons.Single(p => p.SocialSecNum == 000318), 8000, null, DateTime.Now, null, null, VehicleStatuses.Unavailable),
+            new Booking("JKL123", _persons.Single(p => p.SocialSecNum == 010514), 0, null, DateTime.Now, null, null, VehicleStatuses.Unavailable)};
+        }
+        
         public IEnumerable<IPerson> GetPersons() => _persons;
-
         public IEnumerable<IVehicle> GetVehicles()=> _vehicles;
         public IEnumerable<IBooking> GetBookings()=> _bookings;
     }
