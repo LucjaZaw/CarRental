@@ -1,11 +1,11 @@
-﻿namespace CarRental.Common.Enums
+﻿namespace CarRental.Common.Enums;
+
+public enum VehicleTypes
 {
-    public enum VehicleTypes
-    {
-        Golf,
-        Polo,
-        Passat,
-        Motorcycle,
-        Van
-    }
+    Golf,
+    Polo,
+    Passat,
+    Motorcycle,
+    Van,
+    Sprinter
 }

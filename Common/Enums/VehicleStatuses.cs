@@ -1,8 +1,7 @@
-﻿namespace CarRental.Common.Enums
+﻿namespace CarRental.Common.Enums;
+
+public enum VehicleStatuses
 {
-    public enum VehicleStatuses
-    {
-        Available, 
-        Unavailable
-    }
+    Available, 
+    Unavailable
 }

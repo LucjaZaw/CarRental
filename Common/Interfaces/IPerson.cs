@@ -1,11 +1,10 @@
-﻿namespace CarRental.Common.Interfaces
+﻿namespace CarRental.Common.Interfaces;
+
+public interface IPerson
 {
-    public interface IPerson
-    {
-        string FName { get; init; }
-        string LName { get; init; }
-        int SocialSecNum { get; init; }
+    string FName { get; init; }
+    string LName { get; init; }
+    int SocialSecNum { get; init; }
 
 
-    }
 }
