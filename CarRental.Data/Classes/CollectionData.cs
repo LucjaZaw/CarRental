@@ -11,12 +11,12 @@ public class CollectionData : IData
     {new Custumer ("Lucja", "Zawiasa", "000318"),
     new Custumer("Tobias", "Lindius", "010514")};
     readonly List<IVehicle> _vehicles = new List<IVehicle>
-    {new Car("RKO132", "Volkswagen", 4000, 70.0, 400.0, Common.Enums.VehicleTypes.Golf, Common.Enums.VehicleStatuses.Available),
-    new Car("ABC123", "Volkswagen", 2500, 50.0, 600.0, Common.Enums.VehicleTypes.Polo, Common.Enums.VehicleStatuses.Available),
-    new Car("DEF456", "Volkswagen", 8000, 100.0, 300.0, Common.Enums.VehicleTypes.Passat, Common.Enums.VehicleStatuses.Unavailable),
-    new Car("GHI789", "Citroen", 10000, 150.0, 400.0, Common.Enums.VehicleTypes.Van, Common.Enums.VehicleStatuses.Available),
-    new Car("SIM012", "Mercedes", 3600, 200.0, 700.0, Common.Enums.VehicleTypes.Sprinter, Common.Enums.VehicleStatuses.Available),
-    new Motorcycle("JKL123", "Yamaha", 0, 250.0, 1000.0, Common.Enums.VehicleTypes.Motorcycle, Common.Enums.VehicleStatuses.Unavailable)};
+    {new Car("RKO132", "Volkswagen", 4000, 70, 400, Common.Enums.VehicleTypes.Golf, Common.Enums.VehicleStatuses.Available),
+    new Car("ABC123", "Volkswagen", 2500, 50, 600, Common.Enums.VehicleTypes.Polo, Common.Enums.VehicleStatuses.Available),
+    new Car("DEF456", "Volkswagen", 8000, 100, 300, Common.Enums.VehicleTypes.Passat, Common.Enums.VehicleStatuses.Unavailable),
+    new Car("GHI789", "Citroen", 10000, 150, 400, Common.Enums.VehicleTypes.Van, Common.Enums.VehicleStatuses.Available),
+    new Car("SIM012", "Mercedes", 3600, 200, 700, Common.Enums.VehicleTypes.Sprinter, Common.Enums.VehicleStatuses.Available),
+    new Motorcycle("JKL123", "Yamaha", 0, 250, 1000, Common.Enums.VehicleTypes.Motorcycle, Common.Enums.VehicleStatuses.Unavailable)};
      
 
     readonly List<IBooking> _bookings;

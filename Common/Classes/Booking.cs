@@ -23,6 +23,6 @@ public class Booking : IBooking
         TimeSpan? totalDays = (ReturnedAtDate - RentedAtDate);
         var totalCostPerDay = totalDays?.TotalDays * Vehicle.CostPerDay;
         var totalCost = totalCostPerKm + totalCostPerDay;
-        return (int)totalCost;
+        return (int?)totalCost;
     }
 }
