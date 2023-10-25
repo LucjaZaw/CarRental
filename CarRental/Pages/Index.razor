@@ -35,7 +35,7 @@
     </tbody>
 </table>
 
-<table class="table">
+<table class="table"> 
     <thead>
         <tr>
             <th>Plate Nr</th>
@@ -52,14 +52,15 @@
         @foreach (var p in bp.BookingData())
         {
             <tr>
-                <td>@p.PlateNumber</td>
-                <td>@p.Customer</td>
+                <td>@p.Vehicle.PlateNumber</td>
+                <td>@p.Customer.FName, 
+                    @p.Customer.LName</td>
                 <td>@p.KmRented</td>
                 <td>@p.KmReturned</td>
-                <td>@p.RentedAtDate</td>
-                <td>@p.ReturnedAtDate</td>
+                <td>@p.RentedAtDate.ToShortDateString()</td>
+                <td>@p.ReturnedAtDate?.ToShortDateString()</td>
                 <td>@p.TotalCost</td>
-                <td>@p.VehicleStatus</td>
+                <td>@p.Vehicle.VehicleStatus</td>
             </tr>
         }
     </tbody>

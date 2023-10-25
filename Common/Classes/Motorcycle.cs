@@ -8,13 +8,13 @@ public class Motorcycle : IVehicle
     public string PlateNumber { get; init; }
     public string Make { get; init; }
     public int Odometer { get; init; }
-    public double CostPerKm { get; init; }
-    public double CostPerDay { get; init; }
+    public int CostPerKm { get; init; }
+    public int CostPerDay { get; init; }
     public VehicleTypes VehicleType { get; init; }
     public VehicleStatuses VehicleStatus { get; init; }
 
     public Motorcycle(string plateNumber, string make, int odometer, 
-        double costPerKm, double costPerDay, VehicleTypes vehicleType, VehicleStatuses vehicleStatus) => 
+        int costPerKm,int costPerDay, VehicleTypes vehicleType, VehicleStatuses vehicleStatus) => 
         (PlateNumber, Make, Odometer, CostPerKm, CostPerDay, VehicleType, VehicleStatus) = 
         (plateNumber, make, odometer, costPerKm, costPerDay, vehicleType, vehicleStatus);
 
